@@ -33,4 +33,8 @@ public class PixelImage {
     public void save(File file) throws IOException {
         ImageIO.write(image, "jpg", file);
     }
+
+    public void create(int width, int height) {
+        image = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
+    }
 }
