@@ -37,4 +37,8 @@ public class PixelImage {
     public void create(int width, int height) {
         image = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
     }
+
+    public BufferedImage getBufferedImage() {
+        return image;
+    }
 }
