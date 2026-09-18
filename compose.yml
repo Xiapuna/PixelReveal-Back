@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:18
+    container_name: pixelreveal_postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: pixelreveal
+    ports:
+      - "5432:5432"
+    volumes:
+      - pixelreveal_postgres_data:/var/lib/postgresql
+
+volumes:
+  pixelreveal_postgres_data:
